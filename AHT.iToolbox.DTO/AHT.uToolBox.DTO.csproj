@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AFC38D2B-85B7-42A3-97D8-FC014F53371D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AHT.uToolBox.DTO</RootNamespace>
+    <AssemblyName>AHT.iToolbox.DTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\Telerik.WinControls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\Telerik.WinControls.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TelerikCommon, Version=2017.2.613.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Telerik\UI for WinForms R2 2017\Bin40\TelerikCommon.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cascade.cs" />
+    <Compile Include="ColHit.cs" />
+    <Compile Include="ConnectionInfo.cs" />
+    <Compile Include="ConnectionType.cs" />
+    <Compile Include="Constraint.cs" />
+    <Compile Include="DtoBase.cs" />
+    <Compile Include="Facility.cs" />
+    <Compile Include="IConnectionInfo.cs" />
+    <Compile Include="IDtoBase.cs" />
+    <Compile Include="Licensing\BaseNode.cs" />
+    <Compile Include="Licensing\DbVersion.cs" />
+    <Compile Include="Licensing\InheritMode.cs" />
+    <Compile Include="Licensing\LicenceBucket.cs" />
+    <Compile Include="Licensing\Nav.cs" />
+    <Compile Include="Licensing\NavId.cs" />
+    <Compile Include="Licensing\Permissions.cs" />
+    <Compile Include="Licensing\Role.cs" />
+    <Compile Include="Licensing\RoleId.cs" />
+    <Compile Include="LtcWcDuplicatePersonMapping.cs" />
+    <Compile Include="OdbcConnectionInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="Resident.cs" />
+    <Compile Include="ResponsibleParty.cs" />
+    <Compile Include="Room.cs" />
+    <Compile Include="RoomForUpdate.cs" />
+    <Compile Include="SqlTables\SqlDescriptor.cs" />
+    <Compile Include="SqlTables\SqlType.cs" />
+    <Compile Include="SqlTables\SqlVal.cs" />
+    <Compile Include="TableStats.cs" />
+    <Compile Include="Vendor.cs" />
+    <Compile Include="WcPersonNameId.cs" />
+    <Compile Include="Xwalk\Xwalk.cs" />
+    <Compile Include="Xwalk\XwalkInfo.cs" />
+    <Compile Include="Xwalk\XwalkInfoSet.cs" />
+    <Compile Include="Xwalk\XwalkSet.cs" />
+    <Compile Include="ZipEntry.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AHT.uToolBox.Utility\AHT.uToolBox.Utility.csproj">
+      <Project>{a421117d-8764-428f-a91d-8a7d975e7635}</Project>
+      <Name>AHT.uToolBox.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
